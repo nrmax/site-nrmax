@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NRMAX Local Development Tracker</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box }
+    
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .tracker {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      border: 1px solid #334155;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+    
+    .subtitle {
+      color: #94a3b8;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    
+    .status-bar {
+      background: #0f172a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 32px;
+      border: 1px solid #334155;
+    }
+    
+    .status-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    
+    .status-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .status-label {
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+    
+    .status-value {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    
+    .status-good {
+      color: #10b981;
+    }
+    
+    .status-warning {
+      color: #f59e0b;
+    }
+    
+    .status-error {
+      color: #ef4444;
+    }
+    
+    .action-button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    }
+    
+    .action-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+    }
+    
+    .action-button:active {
+      transform: translateY(0);
+    }
+    
+    .info-section {
+      border-top: 1px solid #334155;
+      padding-top: 20px;
+    }
+    
+    .info-title {
+      color: #cbd5e1;
+      font-size: 14px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    
+    .info-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    
+    .info-item {
+      background: #0f172a;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #1e293b;
+    }
+    
+    .info-label {
+      color: #94a3b8;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    
+    .info-value {
+      color: #f8fafc;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .tracking-id {
+      background: #10b981;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-left: 8px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    .last-updated {
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tracker">
+    <div class="header">
+      <div class="logo">N</div>
+      <h1>NRMAX</h1>
+      <p class="subtitle">Visualizador de Desenvolvimento Local</p>
+    </div>
+    
+    <div class="status-bar">
+      <div class="status-item">
+        <span class="status-label">Estado do Site:</span>
+        <span class="status-value status-good">✓ Carregando</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">Tamanho:</span>
+        <span class="status-value">25.7 KB</span>
+      </div>
+      <div class="status-item">
+        <span class="status-label">Última Modificação:</span>
+        <span class="status-value">07/08/2026</span>
+      </div>
+    </div>
+    
+    <a href="index.html" class="action-button">
+      🚀 Abrir Site NRMAX Localmente
+    </a>
+    
+    <div class="info-section">
+      <div class="info-title">Informações do Desenvolvimento</div>
+      <div class="info-items">
+        <div class="info-item">
+          <div class="info-label">Visualizado</div>
+          <div class="info-value">Por: Wilson Orzel</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Tempo de Sessão</div>
+          <div class="info-value">00:00:00</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Url Direta</div>
+          <div class="info-value">file:///index.html</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Versão</div>
+          <div class="info-value">v1.0.0</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="last-updated">
+      Última atualização: 13/07/2026 12:04
+    </div>
+  </div>
+</body>
+</html>
