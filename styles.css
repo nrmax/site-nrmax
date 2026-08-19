@@ -163,6 +163,14 @@ ul {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -1px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text {
+    display: flex;
+    align-items: baseline;
 }
 
 .logo-nr {
@@ -171,6 +179,15 @@ ul {
 
 .logo-max {
     color: var(--orange);
+}
+
+.logo-sub {
+    font-size: 0.55rem;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 2px;
 }
 
 .nav-list {
@@ -970,7 +987,9 @@ ul {
     font-family: var(--font-primary);
     font-size: 1.8rem;
     font-weight: 800;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1;
     margin-bottom: 16px;
 }
 
