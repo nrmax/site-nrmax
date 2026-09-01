@@ -328,10 +328,6 @@ ul {
     gap: 6px;
 }
 
-.dropdown-toggle svg {
-    transition: transform .2s;
-}
-
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -342,17 +338,12 @@ ul {
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0,0,0,.18);
     margin-top: 8px;
-    z-index: 9999;
+    z-index: 99999;
     overflow: hidden;
 }
 
 .dropdown-menu.show {
     display: block;
-}
-
-.dropdown-menu.show ~ .dropdown-toggle svg,
-.dropdown.open .dropdown-toggle svg {
-    transform: rotate(180deg);
 }
 
 .dropdown-item {
@@ -487,6 +478,8 @@ ul {
     flex-wrap: wrap;
     margin-bottom: 60px;
     animation: fadeInUp .6s ease .3s both;
+    position: relative;
+    z-index: 5;
 }
 
 /* Hero Retrofit Cards */
