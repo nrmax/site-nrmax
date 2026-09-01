@@ -348,7 +348,7 @@ ul {
 
 .dropdown-item {
     display: block;
-    padding: 12px 20px;
+    padding: 8px 20px;
     color: var(--dark);
     text-decoration: none;
     font-size: 0.95rem;
