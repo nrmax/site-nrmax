@@ -1329,3 +1329,35 @@ ul {
         height: 54px;
     }
 }
+
+/* SEO - Equipamentos de Elevação */
+.container-equipamentos-elevacao {
+    padding: 60px 20px;
+    line-height: 1.6;
+    color: var(--gray-700);
+}
+
+.container-equipamentos-elevacao h2 {
+    color: var(--primary);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.container-equipamentos-elevacao h3 {
+    color: var(--accent);
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.container-equipamentos-elevacao p {
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+.container-equipamentos-elevacao strong {
+    color: var(--primary);
+    font-weight: 700;
+}
