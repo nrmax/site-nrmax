@@ -81,6 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ===== DROPDOWN TOGGLE =====
+    const dropdown = document.getElementById('hero-services-btn');
+    if (dropdown) {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    }
+
     // ===== COUNTER ANIMATION =====
     let countersStarted = false;
 
