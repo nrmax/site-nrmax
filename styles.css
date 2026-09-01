@@ -322,11 +322,13 @@ ul {
 
 .dropdown-toggle {
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.dropdown-toggle::after {
-    content: ' ▾';
-    font-size: 0.7em;
+.dropdown-toggle svg {
+    transition: transform .2s;
 }
 
 .dropdown-menu {
@@ -339,12 +341,17 @@ ul {
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0,0,0,.18);
     margin-top: 8px;
-    z-index: 100;
+    z-index: 9999;
     overflow: hidden;
 }
 
 .dropdown-menu.show {
     display: block;
+}
+
+.dropdown-menu.show ~ .dropdown-toggle svg,
+.dropdown.open .dropdown-toggle svg {
+    transform: rotate(180deg);
 }
 
 .dropdown-item {
@@ -354,6 +361,9 @@ ul {
     text-decoration: none;
     font-size: 0.95rem;
     cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
     transition: background .2s, color .2s;
 }
 

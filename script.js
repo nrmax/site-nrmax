@@ -90,11 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.addEventListener('click', (e) => {
             e.stopPropagation();
             menu.classList.toggle('show');
+            dropdown.classList.toggle('open');
         });
 
         document.addEventListener('click', (e) => {
             if (!dropdown.contains(e.target)) {
                 menu.classList.remove('show');
+                dropdown.classList.remove('open');
             }
         });
     }
